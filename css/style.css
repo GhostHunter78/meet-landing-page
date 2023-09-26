@@ -17,8 +17,12 @@ html {
   margin: 48px auto;
 }
 
-.faces {
+.faces-mobile {
   width: 100%;
+}
+
+.faces-tablet {
+  display: none;
 }
 
 .group-chat {
@@ -44,7 +48,7 @@ html {
 }
 
 .group-chat-description {
-  margin: 24px auto;
+  margin: 24px auto 0 auto;
 }
 
 .downloadButton-blue {
@@ -190,7 +194,7 @@ html {
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
-  margin: 24px auto;
+  margin: 24px auto 0 auto;
 }
 
 .downloadButton-purple {
@@ -210,4 +214,76 @@ html {
 
 .spanText-purple {
   color: #d9b8ff;
+}
+
+@media (min-width: 768px) {
+  .faces-mobile {
+    display: none;
+  }
+
+  .faces-tablet {
+    display: block;
+    width: 100%;
+  }
+
+  .group-chat {
+    font-size: 48px;
+    line-height: 48px;
+    margin: 72px auto 0 auto;
+  }
+
+  .group-chat-description {
+    width: 457px;
+  }
+
+  .buttons-div {
+    display: flex;
+    gap: 16px;
+  }
+
+  .downloadButton-blue {
+    margin: 32px 0 0 auto;
+  }
+
+  .questionButton {
+    margin: 32px auto 0 0;
+  }
+
+  .images-container {
+    display: flex;
+    gap: 11px;
+    margin: 68px 40px 0 40px;
+  }
+
+  .build-for {
+    margin-top: 48px;
+  }
+
+  .smarter-meetings {
+    font-size: 40px;
+    line-height: 44px;
+    margin-top: 16px;
+  }
+
+  .smarter-meetings-description {
+    width: 573px;
+  }
+
+  .experience-more {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .last-description {
+    width: 573px;
+    margin: 32px auto 0 auto;
+  }
+
+  .downloadButton-purple {
+    margin: 40px auto 0 auto;
+  }
+
+  .lightBlue-div::before {
+    background-image: url(/assets/tablet/image-footer.jpg);
+  }
 }
