@@ -14,14 +14,17 @@ html {
 
 .logo {
   display: flex;
-  margin: 48px auto;
+  margin: 48px auto 0 auto;
 }
 
 .faces-mobile {
   width: 100%;
 }
 
-.faces-tablet {
+.left-faces,
+.right-faces,
+.faces-tablet,
+.images-container-desktop {
   display: none;
 }
 
@@ -64,6 +67,12 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: 26px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.downloadButton-blue:hover {
+  background: #71c0d4;
 }
 
 .spanText-blue {
@@ -83,6 +92,12 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: 26px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.questionButton:hover {
+  background: #b18bdd;
 }
 
 .stick {
@@ -183,6 +198,8 @@ html {
   font-style: normal;
   font-weight: 900;
   line-height: 36px;
+  position: inherit;
+  z-index: 10;
 }
 
 .last-description {
@@ -195,6 +212,8 @@ html {
   font-weight: 500;
   line-height: 26px;
   margin: 24px auto 0 auto;
+  position: inherit;
+  z-index: 10;
 }
 
 .downloadButton-purple {
@@ -210,6 +229,14 @@ html {
   line-height: 26px;
   padding: 16px 40px;
   margin: 32px auto;
+  cursor: pointer;
+  transition: 0.5s;
+  position: inherit;
+  z-index: 10;
+}
+
+.downloadButton-purple:hover {
+  background: #b18bdd;
 }
 
 .spanText-purple {
@@ -285,5 +312,104 @@ html {
 
   .lightBlue-div::before {
     background-image: url(/assets/tablet/image-footer.jpg);
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1440px) {
+  .faces-tablet {
+    display: none;
+  }
+
+  .left-faces,
+  .right-faces {
+    display: block;
+    max-width: 100%;
+  }
+
+  .desktop-header {
+    display: flex;
+  }
+
+  .left-faces {
+    margin: 60px auto 0 -34px;
+  }
+
+  .right-faces {
+    margin: 116px -36px 0 auto;
+  }
+
+  .group-chat {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  .group-chat-description {
+    font-size: 18px;
+    margin-top: 34px;
+  }
+
+  .images-container-desktop {
+    display: flex;
+    gap: 30px;
+    margin: 65px 165px 0 165px;
+  }
+
+  .images-container {
+    display: none;
+  }
+
+  .image {
+    max-width: 23.4%;
+  }
+
+  .build-for {
+    margin-top: 80px;
+  }
+
+  .smarter-meetings {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .smarter-meetings-description {
+    width: 526px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .experience-more {
+    text-align: left;
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .last-description {
+    width: 350px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .lightBlue-div {
+    padding: 90px 165px 0px 165px;
+    height: 330px;
+  }
+
+  .lightBlue-div::before {
+    background-image: url(/assets/desktop/image-footer.jpg);
+    background-size: cover;
+  }
+
+  .desktop-footer {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+    margin: 50px auto;
+  }
+
+  .last-description,
+  .downloadButton-purple {
+    margin: 0;
   }
 }
